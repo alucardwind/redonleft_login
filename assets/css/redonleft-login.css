@@ -1,0 +1,63 @@
+﻿.redonleft-login-widget{
+    margin: 0;
+    font-size: 15px;
+}
+
+.redonleft-login-widget p{
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.redonleft-login-widget input{
+    font-size: 15px;
+    padding: 5px;
+    color: #b6b9bb !important;
+    background-color: black !important;
+    border: 1px solid #344349;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #222 inset !important;
+    box-shadow: 0 0 0px 1000px #222 inset !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+.redonleft-login-widget .redonleft-login-profile{
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    grid-gap: 20px;
+}
+
+.redonleft-login-widget .redonleft-login-profile .redonleft-login-avatar img{
+    border: 1px solid #a09faa;
+    box-sizing: border-box;
+}
+
+.redonleft-login-widget .redonleft-login-profile .redonleft-login-links,
+.redonleft-login-widget .redonleft-login-profile .redonleft-login-post{
+    border-bottom: 1px solid #344349;
+}
+
+.redonleft-login-widget .redonleft-login-form .redonleft-login-submit,
+.redonleft-login-widget .redonleft-login-profile .redonleft-logout-button{
+    color: white;
+    background-color: black;
+    border: 1px solid #a09faa;
+    padding: 5px;
+    font-size: 1em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.redonleft-login-widget .redonleft-login-meta p{
+    margin-bottom: 0;
+}
+
+.redonleft-login-widget .redonleft-login-meta a{
+    font-weight: bold;
+}
+
