@@ -15,6 +15,13 @@ class LoginWidget extends WP_Widget {
 
 	public function widget($args, $instance) {
 		if (!wp_script_is('redonleft-login-js','enqueued')) {\RedonleftLogin\Assets::enqueue_frontend();}
+
+        if (isset($args['before_widget'])) {
+            if (strpos($args['before_widget'], 'widget_block') === false) {
+                $args['before_widget'] = str_replace('class="', 'class="widget_block ', $args['before_widget']);
+            }
+        }
+        
 		echo $args['before_widget'];
 		$this->render_widget();
 		echo $args['after_widget'];
@@ -35,9 +42,11 @@ class LoginWidget extends WP_Widget {
 	}
 	
 	public function render_widget() {
-		if (!is_user_logged_in()) {
+        if (!is_user_logged_in()) {
 			?>
+            <h2 class="widgettitle">登录</h2>
 			<ul class="redonleft-login-widget" data-widget-id="<?php echo esc_attr($this->id); ?>">
+                
 				<form class="redonleft-login-form" onsubmit="return false;">
 					<p><input autocomplete="off" type="text" name="username" placeholder="<?php esc_attr_e('用户名','redonleft-login'); ?>" required></p>
 					<p><input type="password" name="password" placeholder="<?php esc_attr_e('密码','redonleft-login'); ?>" required></p>
@@ -50,7 +59,9 @@ class LoginWidget extends WP_Widget {
 		} else {
 			$user = wp_get_current_user();
 			?>
+            <h2 class="widgettitle">登录</h2>
 			<ul class="redonleft-login-widget" data-widget-id="<?php echo esc_attr($this->id); ?>">
+                
 				<div class="redonleft-login-hello">
 					<p>见到你真好，<?php echo esc_html($user->display_name); ?></p>
 				</div>
@@ -65,5 +76,5 @@ class LoginWidget extends WP_Widget {
 			</ul>
 			<?php
 		}
-	}
+    }
 }
