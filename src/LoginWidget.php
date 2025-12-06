@@ -44,7 +44,7 @@ class LoginWidget extends WP_Widget {
 	public function render_widget() {
         if (!is_user_logged_in()) {
 			?>
-            <h2 class="widgettitle">登录</h2>
+            <h2 class="widgettitle"><?php _e('登录','redonleft-login'); ?></h2>
 			<ul class="redonleft-login-widget" data-widget-id="<?php echo esc_attr($this->id); ?>">
                 
 				<form class="redonleft-login-form" onsubmit="return false;">
@@ -59,7 +59,7 @@ class LoginWidget extends WP_Widget {
 		} else {
 			$user = wp_get_current_user();
 			?>
-            <h2 class="widgettitle">登录</h2>
+            <h2 class="widgettitle"><?php _e('登录','redonleft-login'); ?></h2>
 			<ul class="redonleft-login-widget" data-widget-id="<?php echo esc_attr($this->id); ?>">
                 
 				<div class="redonleft-login-hello">
