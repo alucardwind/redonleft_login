@@ -68,7 +68,7 @@ class LoginWidget extends WP_Widget {
 				<div class="redonleft-login-profile">
 					<div class="redonleft-login-avatar"><?php echo get_avatar($user->ID,80); ?></div>
 					<div class="redonleft-login-meta">
-						<div class="redonleft-login-post"><a herf="<?php echo esc_url( admin_url( 'post-new.php' ) ); ?>"><?php esc_html_e('写作','redonleft-login'); ?></a></div>
+						<div class="redonleft-login-post"><a href="<?php echo esc_url( admin_url( 'post-new.php' ) ); ?>"><?php esc_html_e('写作','redonleft-login'); ?></a></div>
 						<div class="redonleft-login-links"><a href="<?php echo esc_url(admin_url()); ?>"><?php esc_html_e('仪表盘','redonleft-login'); ?></a></div>
 						<p><button type="button" class="redonleft-logout-button"><?php esc_html_e('注销','redonleft-login'); ?></button></p>
 					</div>
